@@ -61,7 +61,6 @@ def dfs_search(search_problem, depth_limit=100, node=None, solution=None):
         solution = SearchSolution(search_problem, "DFS")
 
     solution.nodes_visited = solution.nodes_visited + 1
-
     #return solution once goal is found
     if search_problem.goal_test(node.state):
         solution.path.append(node.state)
