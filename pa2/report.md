@@ -6,27 +6,27 @@ As for my problem models, their get_successor functions and goal_test functions 
 ## Evaluation
 ### Multi-robot Problem
 When testing on the 5x6 maze with 3 bots, using the manhattan heuristic greatly reduced the nodes visited and path cost over the null heuristic (uniform cost search) as shown below:  
-Mazeworld problem: 
-attempted with search method Astar with heuristic null_heuristic
-number of nodes visited: 2000
-solution length: 64
-cost: 32
-path: [(0, 1, 0, 1, 1, 2, 1), (1, 1, 0, 1, 1, 2, 1), (2, 1, 0, 1, 1, 2, 1), (0, 1, 0, 1, 1, 2, 2), (1, 1, 0, 1, 1, 2, 2), (2, 1, 0, 2, 1, 2, 2), (0, 1, 0, 2, 1, 2, 2), (1, 1, 1, 2, 1, 2, 2), (2, 1, 1, 2, 1, 2, 2), (0, 1, 1, 2, 1, 3, 2), (1, 1, 1, 2, 1, 3, 2), (2, 1, 1, 2, 1, 3, 2), (0, 1, 1, 2, 1, 3, 1), (1, 1, 2, 2, 1, 3, 1), (2, 1, 2, 2, 1, 3, 1), (0, 1, 2, 2, 1, 3, 1), (1, 2, 2, 2, 1, 3, 1), (2, 2, 2, 2, 1, 3, 1), (0, 2, 2, 2, 1, 3, 1), (1, 3, 2, 2, 1, 3, 1), (2, 3, 2, 1, 1, 3, 1), (0, 3, 2, 1, 1, 2, 1), (1, 2, 2, 1, 1, 2, 1), (2, 2, 2, 1, 1, 2, 1), (0, 2, 2, 1, 1, 2, 1), (1, 1, 2, 1, 1, 2, 1), (2, 1, 2, 1, 1, 2, 1), (0, 1, 2, 1, 1, 2, 1), (1, 1, 3, 1, 1, 2, 1), (2, 1, 3, 1, 1, 2, 1), (0, 1, 3, 1, 1, 3, 1), (1, 1, 3, 1, 1, 3, 1), (2, 1, 3, 1, 0, 3, 1), (0, 1, 3, 1, 0, 3, 1), (1, 1, 4, 1, 0, 3, 1), (2, 1, 4, 1, 0, 3, 1), (0, 1, 4, 1, 0, 3, 1), (1, 2, 4, 1, 0, 3, 1), (2, 2, 4, 1, 1, 3, 1), (0, 2, 4, 1, 1, 3, 1), (1, 3, 4, 1, 1, 3, 1), (2, 3, 4, 1, 2, 3, 1), (0, 3, 4, 1, 2, 3, 2), (1, 3, 4, 1, 2, 3, 2), (2, 3, 4, 1, 3, 3, 2), (0, 3, 4, 1, 3, 3, 2), (1, 3, 4, 1, 3, 3, 2), (2, 3, 4, 1, 4, 3, 2), (0, 3, 4, 1, 4, 3, 2), (1, 3, 4, 1, 4, 3, 2), (2, 3, 4, 2, 4, 3, 2), (0, 3, 4, 2, 4, 2, 2), (1, 3, 4, 2, 4, 2, 2), (2, 3, 4, 1, 4, 2, 2), (0, 3, 4, 1, 4, 1, 2), (1, 2, 4, 1, 4, 1, 2), (2, 2, 4, 1, 4, 1, 2), (0, 2, 4, 1, 4, 1, 1), (1, 2, 4, 1, 4, 1, 1), (2, 2, 4, 1, 3, 1, 1), (0, 2, 4, 1, 3, 1, 1), (1, 1, 4, 1, 3, 1, 1), (2, 1, 4, 1, 3, 1, 1), (0, 1, 4, 1, 3, 1, 2)]
+Mazeworld problem:  
+attempted with search method Astar with heuristic null_heuristic  
+number of nodes visited: 2000  
+solution length: 64  
+cost: 32  
+path: [(0, 1, 0, 1, 1, 2, 1), (1, 1, 0, 1, 1, 2, 1), (2, 1, 0, 1, 1, 2, 1), (0, 1, 0, 1, 1, 2, 2), (1, 1, 0, 1, 1, 2, 2), (2, 1, 0, 2, 1, 2, 2), (0, 1, 0, 2, 1, 2, 2), (1, 1, 1, 2, 1, 2, 2), (2, 1, 1, 2, 1, 2, 2), (0, 1, 1, 2, 1, 3, 2), (1, 1, 1, 2, 1, 3, 2), (2, 1, 1, 2, 1, 3, 2), (0, 1, 1, 2, 1, 3, 1), (1, 1, 2, 2, 1, 3, 1), (2, 1, 2, 2, 1, 3, 1), (0, 1, 2, 2, 1, 3, 1), (1, 2, 2, 2, 1, 3, 1), (2, 2, 2, 2, 1, 3, 1), (0, 2, 2, 2, 1, 3, 1), (1, 3, 2, 2, 1, 3, 1), (2, 3, 2, 1, 1, 3, 1), (0, 3, 2, 1, 1, 2, 1), (1, 2, 2, 1, 1, 2, 1), (2, 2, 2, 1, 1, 2, 1), (0, 2, 2, 1, 1, 2, 1), (1, 1, 2, 1, 1, 2, 1), (2, 1, 2, 1, 1, 2, 1), (0, 1, 2, 1, 1, 2, 1), (1, 1, 3, 1, 1, 2, 1), (2, 1, 3, 1, 1, 2, 1), (0, 1, 3, 1, 1, 3, 1), (1, 1, 3, 1, 1, 3, 1), (2, 1, 3, 1, 0, 3, 1), (0, 1, 3, 1, 0, 3, 1), (1, 1, 4, 1, 0, 3, 1), (2, 1, 4, 1, 0, 3, 1), (0, 1, 4, 1, 0, 3, 1), (1, 2, 4, 1, 0, 3, 1), (2, 2, 4, 1, 1, 3, 1), (0, 2, 4, 1, 1, 3, 1), (1, 3, 4, 1, 1, 3, 1), (2, 3, 4, 1, 2, 3, 1), (0, 3, 4, 1, 2, 3, 2), (1, 3, 4, 1, 2, 3, 2), (2, 3, 4, 1, 3, 3, 2), (0, 3, 4, 1, 3, 3, 2), (1, 3, 4, 1, 3, 3, 2), (2, 3, 4, 1, 4, 3, 2), (0, 3, 4, 1, 4, 3, 2), (1, 3, 4, 1, 4, 3, 2), (2, 3, 4, 2, 4, 3, 2), (0, 3, 4, 2, 4, 2, 2), (1, 3, 4, 2, 4, 2, 2), (2, 3, 4, 1, 4, 2, 2), (0, 3, 4, 1, 4, 1, 2), (1, 2, 4, 1, 4, 1, 2), (2, 2, 4, 1, 4, 1, 2), (0, 2, 4, 1, 4, 1, 1), (1, 2, 4, 1, 4, 1, 1), (2, 2, 4, 1, 3, 1, 1), (0, 2, 4, 1, 3, 1, 1), (1, 1, 4, 1, 3, 1, 1), (2, 1, 4, 1, 3, 1, 1), (0, 1, 4, 1, 3, 1, 2)]  
 
 Mazeworld problem: 
-attempted with search method Astar with heuristic manhattan_heuristic
-number of nodes visited: 101
-solution length: 55
-cost: 26
+attempted with search method Astar with heuristic manhattan_heuristic  
+number of nodes visited: 101  
+solution length: 55  
+cost: 26  
 path: [(0, 1, 0, 1, 1, 2, 1), (1, 1, 0, 1, 1, 2, 1), (2, 1, 0, 1, 2, 2, 1), (0, 1, 0, 1, 2, 1, 1), (1, 1, 0, 1, 2, 1, 1), (2, 1, 0, 1, 3, 1, 1), (0, 1, 0, 1, 3, 1, 2), (1, 1, 1, 1, 3, 1, 2), (2, 1, 1, 1, 3, 1, 2), (0, 1, 1, 1, 3, 2, 2), (1, 1, 2, 1, 3, 2, 2), (2, 1, 2, 1, 3, 2, 2), (0, 1, 2, 1, 3, 2, 1), (1, 1, 2, 1, 3, 2, 1), (2, 1, 2, 1, 3, 2, 1), (0, 1, 2, 1, 3, 1, 1), (1, 1, 2, 1, 3, 1, 1), (2, 1, 2, 1, 3, 1, 1), (0, 1, 2, 1, 3, 1, 0), (1, 1, 2, 1, 3, 1, 0), (2, 1, 2, 1, 4, 1, 0), (0, 1, 2, 1, 4, 1, 0), (1, 1, 3, 1, 4, 1, 0), (2, 1, 3, 1, 4, 1, 0), (0, 1, 3, 1, 4, 1, 1), (1, 1, 3, 1, 4, 1, 1), (2, 1, 3, 1, 4, 1, 1), (0, 1, 3, 1, 4, 1, 2), (1, 1, 3, 1, 4, 1, 2), (2, 1, 3, 2, 4, 1, 2), (0, 1, 3, 2, 4, 1, 2), (1, 1, 4, 2, 4, 1, 2), (2, 1, 4, 2, 4, 1, 2), (0, 1, 4, 2, 4, 1, 1), (1, 1, 4, 2, 4, 1, 1), (2, 1, 4, 3, 4, 1, 1), (0, 1, 4, 3, 4, 1, 1), (1, 1, 4, 3, 4, 1, 1), (2, 1, 4, 3, 3, 1, 1), (0, 1, 4, 3, 3, 1, 0), (1, 1, 4, 3, 3, 1, 0), (2, 1, 4, 3, 2, 1, 0), (0, 1, 4, 3, 2, 1, 0), (1, 1, 4, 3, 2, 1, 0), (2, 1, 4, 2, 2, 1, 0), (0, 1, 4, 2, 2, 1, 0), (1, 1, 4, 2, 2, 1, 0), (2, 1, 4, 1, 2, 1, 0), (0, 1, 4, 1, 2, 1, 0), (1, 1, 4, 1, 2, 1, 0), (2, 1, 4, 1, 3, 1, 0), (0, 1, 4, 1, 3, 1, 1), (1, 1, 4, 1, 3, 1, 1), (2, 1, 4, 1, 3, 1, 1), (0, 1, 4, 1, 3, 1, 2)]  
 
 Continuing to use the manhattan distance heuristic, I was able to solve puzzles of size 10x10, 20x20, 30x30, and 40x40, with 1-3 robots. These tests can be run in the test_sensorless.py file. Mazes with tight corridors which forced robots to wait turns or navigate around each other had more nodes be explored, with the 30x30 maze requiring robots to squeeze through a small passage in the middle of the maze in turn taking the longest out of all those I tested. Stats for this maze are shown below, with the path abbreviated.  
-Mazeworld problem: 
-attempted with search method Astar with heuristic manhattan_heuristic
-number of nodes visited: 1796630
-solution length: 625
-cost: 228
-path: [(0, 0, 0, 19, 0, 10, 6), (1, 0, 1, 19, 0, 10, 6), ... (2, 19, 19, 0, 0, 0, 18), (0, 19, 19, 0, 0, 0, 19)]
+Mazeworld problem:  
+attempted with search method Astar with heuristic manhattan_heuristic  
+number of nodes visited: 1796630  
+solution length: 625  
+cost: 228  
+path: [(0, 0, 0, 19, 0, 10, 6), (1, 0, 1, 19, 0, 10, 6), ... (2, 19, 19, 0, 0, 0, 18), (0, 19, 19, 0, 0, 0, 19)]  
 
 ### Sensorless Robot Problem
 The sensorless robot was able to deduce its belief state from a large range of mazes, from sizea 4x3 to 30x30. It did so for a 5x6 maze in just 6 moves, with the progression of its belief state shown below.
@@ -47,7 +47,10 @@ Even in a 30x30 maze, it ran quickly, and just 10488 states were visited before 
 m(n,g) = m(n,n') + m(n',g) <= c(n,a,n') + m(n'g).  
 We then see that this is the definition of a monotonic heuristic.
 6. The 8 puzzle problem is an instance of this problem with a 3x3 rectangle, 8 robots, and no walls. The start and goal locations are those given in the book. Manhattan distance is a good heuristic for this puzzle because it is admissable and monotonic, as described above.
-7. To prove that the state space of the 8 puzzle is two disjoint sets, 
+7. To prove that the state space of the 8 puzzle is two disjoint sets, we could generate the entire state space by taking every ordering of the 9 locations in the grid ((0,0),(0,1),(0,2),(1,0),(1,1),(1,2),(2,0),(2,1),(2,2)). For each ordering we get 8 states by assigning the first location to the first location to the first robot, the second to the second robot, and on, leaving out the last location for the blank square. We have 8 different states with these given locations, one for each robot that could be up to move. Once we have this complete state space, A, we can use our algorithm to show that it is disjoint.  
+First, we make our goal test always return false. Then, starting from any state in A, run the algorithm and record which states are visited. Call this set of states B. Since the algorithm will visit nodes until a solution is found or no new nodes are reachable, B will contain all states reachable from the initial state (which is all states reachable from any state reachable from the initial state). We thus know that no other state in A-B is reachable from any state in B.  
+Next, take any state in A-B and repeat the above process. Call the resulting set of states C. Analogously, we know that no state in A-C is reachable from any state in C. We now know that B and C are disjoint.
+Finally, check that A-C-B is the empty set. This shows that A is made of two disjoint sets B and C.
 
 ### Sensorless Robot Problem
 1. I tried out two different heuristics for this problem. First, I tried just using the size of the state space, so that states with fewer possible locations would be explored first. This heuristic is not optimistic - it might overestimate the cost of the path to the goal. For example if there are two adjacent 5 square columns of possible locations, the heuristic value is 10. However, the possible locations might be reduced to one after moving once to the right and up 4 times.
