@@ -1,0 +1,1 @@
+To run the simulation, type "./run_simulation.py" into terminal. To change which maze the bot runs on, the random seed, or the number of iterations run, update the values at the top of the run_simulation file. Output is printed in terminal.

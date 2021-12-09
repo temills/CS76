@@ -1,0 +1,1 @@
+Run the code by typing ./solve_sudoku.py 'puzzle_file' in terminal, where puzzle_file is a .cnf file. In solve_sudoku.py, uncomment desired sat algorithm version. In the same file, to run with resolution, set do_resolution to true.

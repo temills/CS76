@@ -1,3 +1,4 @@
+# Proof of solvability of sensorless problem in polynomial time
 To prove that a sensorless plan of the type implemented in this assignment always exists, I will first prove that it is
  possible to decrease the size of any belief state by at least 1 in polynomial time. A belief state is a set of locations
  in the nxn grid, representing the possible locations of the robot. After a move N, S, E, or W, the belief state may change.
@@ -9,7 +10,7 @@ To prove that a sensorless plan of the type implemented in this assignment alway
 The size of the belief state decreases when two locations l1 and l2 map to the same new location. This occurs when, in the direction of the move,
 there is l1, l2, and then an obstacle or a wall. l1 and l2 both then map to l2 after the move. Let's call such a mapping the desired mapping.
 We can reach the desired mapping from any belief state in polynomial time as follows:  
-First, take two possible locations l1 and l2 within the connected component containing the goal (if there is only one such location), then either the
+First, take two possible locations l1 and l2 within the connected component containing the goal (if there is only one such location, then either the
  robot is at this location and we are done, or the goal is not reachable). Then, find the shortest path, p, between l1 and l2 using BFS.
  This can be done in O(n^2) time. Let this path contain e moves East, w moves West, s South, and n North. Then, move according to p.
 l1 has now mapped to l1'=l2. l2 maps to some location l2' such that the path between l2' contains at most e moves East, w moves West, s moves South,

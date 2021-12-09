@@ -1,0 +1,2 @@
+This code can be run by uncommenting desired test cases in test.py and running ./test.py in terminal.  
+Set desired heuristics and inference techniques to True at the top of the BacktrackingSolver.py file.

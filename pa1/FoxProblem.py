@@ -1,4 +1,3 @@
-"""
 class FoxProblem:
     def __init__(self, start_state=(3, 3, 1)):
         self.start_state = start_state
@@ -116,3 +115,4 @@ if __name__ == "__main__":
     test_cp = FoxProblem((5, 5, 1))
     print(test_cp.get_successors((5, 5, 1)))
     print(test_cp)
+"""

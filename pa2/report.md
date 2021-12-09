@@ -56,6 +56,9 @@ Finally, check that A-C-B is the empty set. This shows that A is made of two dis
 1. I tried out two different heuristics for this problem. First, I tried just using the size of the state space, so that states with fewer possible locations would be explored first. This heuristic is not optimistic - it might overestimate the cost of the path to the goal. For example if there are two adjacent 5 square columns of possible locations, the heuristic value is 10. However, the possible locations might be reduced to one after moving once to the right and up 4 times.
 I then tried summing the number of possible x locations -1 and the number of possible y locations -1 . This worked better in practice, giving shorter paths and visiting less nodes than the first heuristic for a variety of mazes. This heuristic is optimistic, because each movement can change either the x or y value by at most one, so that at most one x or y value will be removed from the possible locations with each movement. This heuristic gives the number of x and y values that must be removed from the state. Thus, it gives a lower bound on the number of actions required to reach the goal, so that the heuristic value is less than or equal to the true cost. Because it is optimistic, A* will not overlook the optimal solution when using this heuristic, as it might when using the first heuristic I tried out.
 
+## Bonus
+I give a proof of the solvability of the sensorless robot problem in polynomial time in the file BONUS_proof.md.
+
 
 
 
